@@ -165,6 +165,10 @@ const messages = {
     docs_admin_title: 'OpenAI Admin キーは必要か',
     docs_admin_body:
       'OpenAI Admin キーは必須ではありません。予算や管理系の機能を使いたい時だけ設定してください。通常の文字起こしや翻訳だけなら API キーだけで十分です。',
+    docs_links_title: 'キー取得に使う公式ページ',
+    docs_link_openai_api: 'OpenAI API キー: OpenAI ダッシュボード',
+    docs_link_openai_admin: 'OpenAI Admin キー: OpenAI 管理 API ドキュメント',
+    docs_link_deepl_api: 'DeepL API キー: DeepL 公式ドキュメント',
     privacy_eyebrow: 'プライバシー',
     privacy_title: 'データの扱いと通信の考え方',
     privacy_desc:
@@ -372,6 +376,10 @@ const messages = {
     docs_admin_title: 'Do you need an OpenAI Admin key?',
     docs_admin_body:
       'Usually no. The Admin key is optional and mainly useful for budget or management-related views.',
+    docs_links_title: 'Official links for getting keys',
+    docs_link_openai_api: 'OpenAI API key: OpenAI dashboard',
+    docs_link_openai_admin: 'OpenAI Admin key: OpenAI admin API docs',
+    docs_link_deepl_api: 'DeepL API key: DeepL official docs',
     privacy_eyebrow: 'Privacy',
     privacy_title: 'What is local, what is sent, and how transport works',
     privacy_desc:
@@ -579,6 +587,10 @@ const messages = {
     docs_admin_title: 'OpenAI Admin 키가 꼭 필요한가',
     docs_admin_body:
       '보통은 필요 없습니다. Admin 키는 예산이나 관리 기능을 보고 싶을 때만 선택적으로 쓰면 됩니다.',
+    docs_links_title: '키 발급에 쓰는 공식 링크',
+    docs_link_openai_api: 'OpenAI API 키: OpenAI 대시보드',
+    docs_link_openai_admin: 'OpenAI Admin 키: OpenAI Admin API 문서',
+    docs_link_deepl_api: 'DeepL API 키: DeepL 공식 문서',
     privacy_eyebrow: '개인정보 처리방침',
     privacy_title: '데이터가 어디에 남고 어디로 전송되는지',
     privacy_desc:
@@ -785,6 +797,10 @@ const messages = {
     docs_admin_title: 'OpenAI Admin 密钥是否必须',
     docs_admin_body:
       '通常不是必须的。只有在你需要预算或管理相关功能时，才需要额外配置 Admin 密钥。',
+    docs_links_title: '获取密钥时可用的官方链接',
+    docs_link_openai_api: 'OpenAI API 密钥：OpenAI 控制台',
+    docs_link_openai_admin: 'OpenAI Admin 密钥：OpenAI Admin API 文档',
+    docs_link_deepl_api: 'DeepL API 密钥：DeepL 官方文档',
     privacy_eyebrow: '隐私政策',
     privacy_title: '数据会留在哪里，哪些会发到外部',
     privacy_desc:

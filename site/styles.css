@@ -697,6 +697,20 @@ h3 {
   line-height: 1.75;
 }
 
+.docs-links {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.docs-links li + li {
+  margin-top: 8px;
+}
+
+.docs-links a {
+  color: var(--accent);
+  font-weight: 700;
+}
+
 .legal-card dl {
   display: grid;
   grid-template-columns: 200px 1fr;
