@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ja" data-page="home">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TraLingo</title>
+    <meta
+      name="description"
+      content="TraLingo is a macOS app for live transcription, translation, summary generation, and export."
+    />
+    <link rel="icon" type="image/png" href="./assets/favicon.png" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand-wrap" href="./index.html" aria-label="TraLingo Home">
+        <img class="brand-mark" src="./assets/logo.svg" alt="TraLingo" />
+        <div class="brand-copy">
+          <div class="brand-name">TraLingo</div>
+          <div class="brand-tag" data-i18n="brand_tag"></div>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="./index.html" data-i18n="nav_home"></a>
+        <a href="./features.html" data-i18n="nav_features"></a>
+        <a href="./docs.html" data-i18n="nav_docs"></a>
+        <a href="https://github.com/nococoanolife/TraLingo/releases/latest" target="_blank" rel="noreferrer" data-i18n="nav_download"></a>
+        <a href="https://github.com/nococoanolife/TraLingo" target="_blank" rel="noreferrer" data-i18n="nav_github"></a>
+      </nav>
+
+      <div class="lang-switcher">
+        <button data-lang="ja">🇯🇵 日本語</button>
+        <button data-lang="en">🇺🇸 English</button>
+        <button data-lang="ko">🇰🇷 한국어</button>
+        <button data-lang="zh">🇨🇳 简体中文</button>
+      </div>
+    </header>
+
+    <main class="page">
+      <section class="hero">
+        <div class="hero-copy">
+          <div class="eyebrow" data-i18n="home_eyebrow"></div>
+          <h1 data-i18n="home_title"></h1>
+          <p class="lede" data-i18n="home_lede"></p>
+
+          <div class="hero-points">
+            <span data-i18n="home_point_1"></span>
+            <span data-i18n="home_point_2"></span>
+            <span data-i18n="home_point_3"></span>
+          </div>
+
+          <div class="cta-row">
+            <a class="button primary" href="https://github.com/nococoanolife/TraLingo/releases/latest" target="_blank" rel="noreferrer" data-i18n="home_cta_primary"></a>
+            <a class="button secondary" href="./docs.html" data-i18n="home_cta_secondary"></a>
+          </div>
+        </div>
+
+        <div class="hero-shot" aria-label="TraLingo UI preview">
+          <div class="app-shell">
+            <div class="app-topbar">
+              <div class="app-left">
+                <div class="app-menu">☰</div>
+                <div class="app-title">TraLingo</div>
+                <div class="app-badge">macOS</div>
+              </div>
+              <div class="app-model-chip">
+                <div class="app-chip-label" data-i18n="home_mock_model_label"></div>
+                <div class="app-chip-value">gpt-4o-mini-transcribe / gpt-4o-mini</div>
+              </div>
+            </div>
+
+            <div class="app-body">
+              <aside class="app-sidebar">
+                <div class="sidebar-card">
+                  <div class="sidebar-title" data-i18n="home_mock_audio_title"></div>
+                  <button class="audio-toggle active">
+                    <span class="audio-wave"><i></i><i class="mid"></i><i class="tall"></i><i class="mid"></i><i></i></span>
+                    <span data-i18n="home_mock_mic_button"></span>
+                  </button>
+                  <button class="audio-toggle">
+                    <span class="audio-wave"><i></i><i class="mid"></i><i></i><i class="mid"></i><i></i></span>
+                    <span data-i18n="home_mock_system_button"></span>
+                  </button>
+                </div>
+
+                <div class="sidebar-card">
+                  <div class="sidebar-title" data-i18n="home_mock_pipeline_title"></div>
+                  <div class="sidebar-row"><span data-i18n="home_mock_pipeline_mode_label"></span><strong data-i18n="home_mock_pipeline_mode_value"></strong></div>
+                  <div class="sidebar-row"><span data-i18n="home_mock_pipeline_health_label"></span><strong class="ok" data-i18n="home_mock_pipeline_health_value"></strong></div>
+                  <div class="sidebar-row"><span data-i18n="home_mock_pipeline_summary_label"></span><strong data-i18n="home_mock_pipeline_summary_value"></strong></div>
+                </div>
+              </aside>
+
+              <section class="caption-panel">
+                <div class="status-rail" data-i18n="home_mock_status"></div>
+
+                <article class="caption-card">
+                  <div class="caption-head">
+                    <span class="caption-label" data-i18n="home_original_label"></span>
+                    <span class="caption-meta" data-i18n="home_mock_original_meta"></span>
+                  </div>
+                  <p class="original-text" data-i18n="home_original_text"></p>
+                </article>
+
+                <article class="caption-card">
+                  <div class="caption-head">
+                    <span class="caption-label" data-i18n="home_translation_label"></span>
+                    <span class="caption-meta" data-i18n="home_mock_translation_meta"></span>
+                  </div>
+                  <p class="translated-text" data-i18n="home_translation_text"></p>
+                </article>
+
+                <article class="caption-card summary-card">
+                  <div class="caption-head">
+                    <span class="caption-label" data-i18n="home_summary_label"></span>
+                    <span class="caption-meta" data-i18n="home_mock_summary_meta"></span>
+                  </div>
+                  <p data-i18n="home_summary_text"></p>
+                </article>
+              </section>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="story">
+        <div class="section-intro">
+          <div class="eyebrow" data-i18n="story_eyebrow"></div>
+          <h2 data-i18n="home_story_title"></h2>
+        </div>
+
+        <div class="story-grid">
+          <article class="story-card">
+            <span class="story-step">1</span>
+            <h3 data-i18n="home_story_1_title"></h3>
+            <p data-i18n="home_story_1_body"></p>
+          </article>
+          <article class="story-card">
+            <span class="story-step">2</span>
+            <h3 data-i18n="home_story_2_title"></h3>
+            <p data-i18n="home_story_2_body"></p>
+          </article>
+          <article class="story-card">
+            <span class="story-step">3</span>
+            <h3 data-i18n="home_story_3_title"></h3>
+            <p data-i18n="home_story_3_body"></p>
+          </article>
+        </div>
+      </section>
+
+      <section class="feature-strip">
+        <article class="feature-card">
+          <h3 data-i18n="home_feature_1_title"></h3>
+          <p data-i18n="home_feature_1_body"></p>
+        </article>
+        <article class="feature-card">
+          <h3 data-i18n="home_feature_2_title"></h3>
+          <p data-i18n="home_feature_2_body"></p>
+        </article>
+        <article class="feature-card">
+          <h3 data-i18n="home_feature_3_title"></h3>
+          <p data-i18n="home_feature_3_body"></p>
+        </article>
+      </section>
+
+      <section class="download-grid">
+        <article class="download-panel">
+          <div class="download-copy">
+            <div class="eyebrow" data-i18n="nav_download"></div>
+            <h2 data-i18n="home_download_title"></h2>
+            <p data-i18n="home_download_body"></p>
+          </div>
+
+          <div class="download-actions">
+            <a class="button primary" href="https://github.com/nococoanolife/TraLingo/releases/latest" target="_blank" rel="noreferrer" data-i18n="home_download_primary"></a>
+            <a class="button secondary" href="https://github.com/nococoanolife/TraLingo" target="_blank" rel="noreferrer" data-i18n="home_download_secondary"></a>
+          </div>
+        </article>
+
+        <article class="support-panel">
+          <div class="eyebrow" data-i18n="support_eyebrow"></div>
+          <h2 data-i18n="support_title"></h2>
+          <p data-i18n="support_body"></p>
+          <a class="button secondary" href="https://buymeacoffee.com/nococoanolife" target="_blank" rel="noreferrer" data-i18n="support_button"></a>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-links">
+        <a href="./tokusho.html" data-i18n="nav_tokusho"></a>
+        <a href="./privacy.html" data-i18n="nav_privacy"></a>
+        <a href="./terms.html" data-i18n="nav_terms"></a>
+      </div>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
