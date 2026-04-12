@@ -22,8 +22,8 @@ body {
   margin: 0;
   min-height: 100%;
   background:
-    radial-gradient(circle at top right, rgba(51, 105, 235, 0.14), transparent 24%),
-    radial-gradient(circle at bottom left, rgba(246, 204, 114, 0.18), transparent 22%),
+    radial-gradient(circle at top right, rgba(51, 105, 235, 0.08), transparent 22%),
+    radial-gradient(circle at bottom left, rgba(246, 204, 114, 0.1), transparent 18%),
     linear-gradient(180deg, var(--bg-top) 0%, var(--bg) 100%);
   color: var(--text);
   font-family:
@@ -112,11 +112,12 @@ p {
 
 .nav-links a {
   padding: 10px 14px;
-  border: 1px solid transparent;
+  border: 1px solid rgba(44, 62, 102, 0.08);
   border-radius: 999px;
   font-size: 15px;
   font-weight: 700;
   color: #5f6a82;
+  background: rgba(255, 255, 255, 0.58);
   transition: background 160ms ease, border-color 160ms ease, color 160ms ease;
 }
 
@@ -165,8 +166,8 @@ p {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
-  gap: 34px;
+  grid-template-columns: minmax(0, 0.96fr) minmax(0, 1.04fr);
+  gap: 26px;
   align-items: center;
 }
 
@@ -179,21 +180,21 @@ p {
 
 h1 {
   margin-top: 16px;
-  font-size: clamp(36px, 5.1vw, 72px);
-  line-height: 1.02;
+  font-size: clamp(32px, 4.6vw, 60px);
+  line-height: 1.08;
   letter-spacing: -0.05em;
-  max-width: 680px;
+  max-width: 740px;
 }
 
 h2 {
-  font-size: clamp(28px, 2.8vw, 40px);
-  line-height: 1.05;
+  font-size: clamp(26px, 2.5vw, 34px);
+  line-height: 1.12;
   letter-spacing: -0.04em;
 }
 
 h3 {
-  font-size: 20px;
-  line-height: 1.3;
+  font-size: 18px;
+  line-height: 1.35;
   letter-spacing: -0.02em;
 }
 
@@ -211,8 +212,8 @@ h3 {
 
 .lede {
   margin-top: 24px;
-  max-width: 740px;
-  font-size: 17px;
+  max-width: 780px;
+  font-size: 16px;
 }
 
 .hero-points,
@@ -272,12 +273,12 @@ h3 {
 .hero-shot {
   width: min(100%, 860px);
   margin-left: auto;
-  padding: 20px;
+  padding: 16px;
   border-radius: 34px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.76), rgba(255, 255, 255, 0.44));
+  background: rgba(255, 255, 255, 0.74);
   border: 1px solid rgba(255, 255, 255, 0.92);
-  box-shadow: 0 34px 80px var(--shadow);
-  backdrop-filter: blur(18px);
+  box-shadow: 0 22px 56px var(--shadow);
+  backdrop-filter: blur(12px);
   overflow: hidden;
 }
 
@@ -383,7 +384,7 @@ h3 {
 .step-card {
   border: 1px solid rgba(86, 104, 142, 0.14);
   background: var(--panel);
-  box-shadow: 0 20px 44px rgba(16, 24, 40, 0.08);
+  box-shadow: 0 12px 28px rgba(16, 24, 40, 0.06);
 }
 
 .sidebar-card,
@@ -594,7 +595,7 @@ h3 {
 .feature-card h3,
 .feature-detail-card h3,
 .step-card h3 {
-  max-width: 24ch;
+  max-width: 32ch;
 }
 
 .story-card p,

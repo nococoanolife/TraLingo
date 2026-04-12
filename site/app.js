@@ -43,7 +43,7 @@ const messages = {
     home_summary_text:
       '会議や動画の途中でも原文と翻訳を同時に追えます。終わったら今見えている字幕からそのまま要点をまとめられます。',
     story_eyebrow: 'こんな場面で役立ちます',
-    home_story_title: '初めてでも、使いどころがすぐわかる',
+    home_story_title: 'さまざまな場面で活用できる',
     home_story_1_title: '別言語の会議でも置いていかれない',
     home_story_1_body:
       '誰かが別の言語で話し始めても、原文と翻訳が同じ画面に出るので、内容の流れを追い続けやすくなります。',
@@ -63,11 +63,11 @@ const messages = {
     home_feature_3_body:
       '文字起こしだけで終わらず、サマリー、コピー、ダウンロードまでつながっているので、あとで使える記録として残せます。',
     origin_eyebrow: 'なぜ作ったのか',
-    origin_title: '通訳が必要な場面が増え、ちょうどいい道具が見つからなかったから作りました',
+    origin_title: '通訳が必要な場面が増え、ちょうどいいアプリが見つからなかったので作りました',
     origin_body_1:
-      'グローバル企業で働く中で、会議や動画視聴のたびに通訳や翻訳の助けが必要になる場面が増えました。AI で何とかできないかと調べても、原文と翻訳を同時に追えて、そのまま要点まで残せるものがなかなか見つかりませんでした。',
+      'グローバル企業で働く中で、会議や動画視聴のたびに通訳や翻訳の助けが必要になる場面が増えました。AI で何とかできないかと調べても、原文と翻訳を同時に追えて、そのまま要点まで残せるアプリがなかなか見つかりませんでした。',
     origin_body_2:
-      'そこで自分で作ってみたところ、想像以上にうまく動き、速度も精度も日常で使える水準まで仕上がりました。まずは公開してフィードバックを受け取り、少しずつ改善しながら、言語の壁を下げる助けになればと考えています。',
+      'そこで自分で作ってみたところ、想定以上にうまく動き、速度も精度も日常で十分使える水準まで仕上がりました。公開してフィードバックを受け取りながら改善を続け、言語の壁を少しでも下げる手助けができればと考えています。',
     home_download_title: 'すぐ試す',
     home_download_body:
       '最新版の macOS アプリは GitHub Releases から入手できます。更新履歴や issue も同じ場所で確認できます。',
@@ -81,17 +81,17 @@ const messages = {
     features_eyebrow: '機能',
     features_title: 'できること',
     features_intro:
-      'TraLingo は、聞き取る、翻訳する、あとで使える形に残す、という流れを一つの画面で完結させるためのアプリです。',
+      'TraLingo は、聞き取る、翻訳する、あとで使える形で残す、という流れを一つの画面で完結させるためのアプリです。',
     features_card_1_title: '原文と翻訳を同時に見る',
     features_card_1_body:
       '訳文だけでなく原文も残すので、意訳に引っ張られすぎず、自分で確認しながら理解できます。',
-    features_card_2_title: 'マイクとシステム音声を分けて扱う',
+    features_card_2_title: 'マイクとシステム音声を使い分ける',
     features_card_2_body:
       '自分の声だけ、相手の声だけ、動画や配信の音だけ、といった使い分けができます。',
-    features_card_3_title: '遅延翻訳とリアルタイム翻訳を切り替える',
+    features_card_3_title: '遅延翻訳とリアルタイム翻訳を選ぶ',
     features_card_3_body:
       '体感速度を優先したい時と、安定した翻訳結果を優先したい時で、流れを切り替えられます。',
-    features_card_4_title: '一方向と双方向を選べる',
+    features_card_4_title: '一方向と双方向を選ぶ',
     features_card_4_body:
       '通訳のように片方向へ訳すだけでなく、言語 A / 言語 B を行き来する双方向モードにも対応しています。',
     features_card_5_title: '今見えている字幕からサマリーを作る',
@@ -103,9 +103,9 @@ const messages = {
     features_card_7_title: '音が来ているかを波形で確認できる',
     features_card_7_body:
       'マイクとシステム音声は波形付きボタンで表示されるので、入力されているかどうかをその場で確認できます。',
-    features_card_8_title: 'サイドパネルを自分に合う幅に調整できる',
+    features_card_8_title: 'ドッキング表示に切り替えられる',
     features_card_8_body:
-      '表示スペースに合わせてサイドパネル幅を変えられるため、字幕を広く見たい時も調整しやすくなっています。',
+      '左・右・上・下のドッキング表示に切り替えられるので、作業中の他アプリと並べて使いやすくなっています。',
     features_card_9_title: 'テーマと字幕表示を細かく変えられる',
     features_card_9_body:
       'ライト / ダークや字幕サイズ、太さ、行間などを変えられるので、自分にとって読みやすい見た目に合わせられます。',
@@ -122,7 +122,7 @@ const messages = {
     docs_eyebrow: '使い方',
     docs_title: '初めて使う人向けガイド',
     docs_intro:
-      '設定から開始までの流れを、なるべく迷わない順番でまとめています。まずは一方向で試し、その後に双方向や DeepL を加えるのが安全です。',
+      '設定から開始までの流れを、初めてでも迷いにくい順番でまとめています。まずは一方向で試し、慣れてから双方向や DeepL を加えるのがおすすめです。',
     docs_step_1_title: '1. OpenAI API キーを設定する',
     docs_step_1_body:
       'まず OpenAI の管理画面で API キーを作成し、設定画面の「モデルと接続」に入力します。文字起こしや翻訳の多くは、このキーがないと動きません。',
@@ -131,7 +131,7 @@ const messages = {
       '会議ならマイク、動画や配信ならシステム音声、両方を追いたいなら両方をオンにします。波形が動いていれば入力されています。',
     docs_step_3_title: '3. 翻訳の流れを決める',
     docs_step_3_body:
-      '一方向は固定の翻訳先へ訳します。双方向は言語 A と言語 B を行き来します。リアルタイム翻訳は速く、遅延翻訳は安定しやすいです。',
+      '一方向は固定の翻訳先へ訳し、双方向は言語 A と言語 B を行き来します。リアルタイム翻訳は速さ重視、遅延翻訳は安定性重視です。',
     docs_step_4_title: '4. 文字起こし開始を押す',
     docs_step_4_body:
       '開始ボタンを押すと、字幕が並び始めます。止めるまでは新しい発話が追加され、翻訳がついていきます。',
@@ -310,9 +310,9 @@ const messages = {
     features_card_7_title: 'See live audio activity',
     features_card_7_body:
       'Waveform-based audio buttons show whether microphone or system audio is actually arriving.',
-    features_card_8_title: 'Resize the side panel',
+    features_card_8_title: 'Switch into docked layouts',
     features_card_8_body:
-      'You can resize the side panel to make more room for captions or keep settings visible.',
+      'You can dock the app to the left, right, top, or bottom so it stays visible beside the app you are actually working in.',
     features_card_9_title: 'Adjust theme and caption appearance',
     features_card_9_body:
       'Switch themes and control caption size, weight, spacing, and emphasis to match your reading preference.',
@@ -517,9 +517,9 @@ const messages = {
     features_card_7_title: '파형으로 오디오 입력 확인',
     features_card_7_body:
       '마이크와 시스템 오디오 버튼에서 파형을 바로 볼 수 있어 입력이 들어오는지 확인하기 쉽습니다.',
-    features_card_8_title: '사이드 패널 폭 조절',
+    features_card_8_title: '도킹 레이아웃으로 전환',
     features_card_8_body:
-      '자막을 더 넓게 보고 싶을 때나 설정을 함께 보고 싶을 때 패널 폭을 직접 조절할 수 있습니다.',
+      '좌우상하 도킹 모드로 전환할 수 있어 다른 앱과 나란히 두고 보기 편합니다.',
     features_card_9_title: '테마와 자막 스타일 조정',
     features_card_9_body:
       '라이트 / 다크 테마와 자막 크기, 두께, 줄 간격을 바꿔 읽기 편한 화면으로 맞출 수 있습니다.',
@@ -723,9 +723,9 @@ const messages = {
     features_card_7_title: '通过波形确认音频是否进入',
     features_card_7_body:
       '麦克风和系统音频按钮带有波形，能快速判断当前是否真的有声音进入应用。',
-    features_card_8_title: '侧边栏宽度可手动调整',
+    features_card_8_title: '可切换到停靠布局',
     features_card_8_body:
-      '想把字幕区域放大，或者想把设置保持在视野里时，都可以直接调节侧边栏宽度。',
+      '可以切换到左、右、上、下停靠模式，方便与正在使用的其他应用并排查看。',
     features_card_9_title: '主题和字幕样式可调',
     features_card_9_body:
       '可以切换浅色 / 深色主题，也可以调字幕大小、粗细、行间距，方便按自己的阅读习惯调整。',
