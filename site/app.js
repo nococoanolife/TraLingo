@@ -125,7 +125,7 @@ const messages = {
       '設定から開始までの流れを、初めてでも迷いにくい順番でまとめています。まずは一方向で試し、慣れてから双方向や DeepL を加えるのがおすすめです。',
     docs_step_1_title: '1. OpenAI API キーを設定する',
     docs_step_1_body:
-      'まず OpenAI の管理画面で API キーを作成し、設定画面の「モデルと接続」に入力します。API キーがないと文字起こし開始ボタンを押しても処理は始まりません。',
+      'まず OpenAI の Billing で支払い設定やクレジットを用意し、その後で API キーを作成して設定画面の「モデルと接続」に入力します。API キーがないと文字起こしは開始できません。',
     docs_step_2_title: '2. 使う音声入力を選ぶ',
     docs_step_2_body:
       '会議ならマイク、動画や配信ならシステム音声、両方を追いたいなら両方をオンにします。波形が動いていれば入力されています。',
@@ -138,9 +138,12 @@ const messages = {
     docs_step_5_title: '5. 必要なら DeepL キーも追加する',
     docs_step_5_body:
       'DeepL を翻訳に使いたい場合は、DeepL の API キーを発行して追加します。DeepL を選ばないなら、この設定は不要です。',
-    docs_step_6_title: '6. 初めてマイクを使う時の権限許可',
+    docs_step_6_title: '6. マイク音声の許可',
     docs_step_6_body:
-      '初めてマイクを使う時は macOS の許可が必要です。許可しないとマイク入力は使えません。',
+      '初めてマイクをオンにすると macOS が権限を確認します。「許可」を選ばないと、マイクの文字起こしは始まりません。',
+    docs_step_7_title: '7. 文字起こしが開始できることを確認',
+    docs_step_7_body:
+      '許可を終えたら、もう一度開始ボタンを押して文字起こしが流れ始めるか確認します。原文が出てくれば準備完了です。',
     docs_shot_1: '設定画面のスクリーンショットをここに追加',
     docs_shot_2: 'オーディオ入力の選択画面をここに追加',
     docs_shot_3: '翻訳モードの選択画面をここに追加',
@@ -161,15 +164,14 @@ const messages = {
       '初回起動時に macOS から「開けません」と警告された場合は、「プライバシーとセキュリティ」から許可してください。これは未 notarize 配布であることによる macOS の通常の警告です。',
     docs_keys_title: 'OpenAI API キーと DeepL キーの入手方法',
     docs_keys_body:
-      'OpenAI API は有料で、通常は先に課金設定が必要です。利用状況や残高は Usage ページで確認できます。DeepL API Free は無料で始められ、1 日あたり 50 万文字までが目安です。アプリ自体は無料でも、外部 API の利用料は各サービス側で発生します。',
+      'OpenAI API は有料です。最初に Billing ページで支払い設定やクレジットを用意し、その後で API キーを発行します。残高や利用量は Usage ページで確認できます。DeepL API Free は無料で始めやすく、1 日あたり 50 万文字前後が目安です。TraLingo 自体は無料ですが、API 利用料は各サービス側で発生します。',
     docs_admin_title: 'OpenAI Admin キーは必要か',
     docs_admin_body:
       'OpenAI Admin キーは必須ではありません。予算や管理系の機能を使いたい時だけ設定してください。通常の文字起こしや翻訳だけなら API キーだけで十分です。',
-    docs_links_title: 'キー取得に使う公式ページ',
-    docs_link_openai_api: 'OpenAI API キー: OpenAI ダッシュボード'
-    ,docs_link_openai_usage: 'OpenAI Usage: 利用状況 / 残高の確認'
-    ,docs_link_deepl_pricing: 'DeepL API: 料金と利用上限の確認',
+    docs_links_title: 'キー取得や残高確認に使う公式ページ',
+    docs_link_openai_api: 'OpenAI API キー: OpenAI ダッシュボード',
     docs_link_openai_admin: 'OpenAI Admin キー: OpenAI 管理キー画面',
+    docs_link_openai_billing: 'OpenAI Billing: 課金設定 / クレジットの追加',
     docs_link_deepl_api: 'DeepL API キー: DeepL アカウントのキー画面',
     docs_link_openai_usage: 'OpenAI Usage: 利用状況 / 残高の確認',
     docs_link_deepl_pricing: 'DeepL API: 料金と上限の確認',
@@ -191,6 +193,7 @@ const messages = {
     docs_system_audio_caption_3: '「Quit & Reopen」を選びます。',
     docs_system_audio_caption_4: 'トグルがオンになっていることを確認します。',
     docs_system_audio_caption_5: '最後の確認で「Allow」を選びます。',
+    docs_system_audio_caption_6: '最後に開始ボタンを押して、システム音声の文字起こしが流れ始めることを確認します。',
     docs_settings_title: '設定画面の各項目',
     docs_settings_body:
       'モデル、DeepL、オーディオ、字幕、表示、予算まで、一通りの設定画面を確認できます。',
@@ -361,7 +364,7 @@ const messages = {
       'This guide focuses on the shortest path from first launch to a working session. Start with the stable path, then add more advanced options later.',
     docs_step_1_title: '1. Add your OpenAI API key',
     docs_step_1_body:
-      'Create an OpenAI API key in your OpenAI dashboard, then paste it into Settings. Transcription cannot start without this key.',
+      'First set up billing or credits in OpenAI, then create an API key and paste it into Settings. Transcription cannot start without this key.',
     docs_step_2_title: '2. Choose the audio input',
     docs_step_2_body:
       'Turn on Microphone, System Audio, or both. If the waveform moves, the app is receiving sound.',
@@ -374,9 +377,12 @@ const messages = {
     docs_step_5_title: '5. Add a DeepL key if you want DeepL',
     docs_step_5_body:
       'DeepL is optional. Only add a DeepL API key if you plan to choose DeepL as the translation provider.',
-    docs_step_6_title: '6. Allow microphone access the first time',
+    docs_step_6_title: '6. Allow microphone access',
     docs_step_6_body:
-      'The first time you use the microphone, macOS will ask for permission. Without that permission, microphone input will not work.',
+      'The first time you turn on the microphone, macOS asks for permission. If you do not allow it, microphone transcription will not start.',
+    docs_step_7_title: '7. Confirm that transcription starts',
+    docs_step_7_body:
+      'After granting permission, press Start again and make sure transcript lines begin to appear. If the original line is shown, the setup worked.',
     docs_shot_1: 'Place the settings screenshot here',
     docs_shot_2: 'Place the audio input screenshot here',
     docs_shot_3: 'Place the translation mode screenshot here',
@@ -397,13 +403,14 @@ const messages = {
       'If macOS says the app cannot be opened, approve it from Privacy & Security. This is the normal warning for an unsigned or non-notarized distribution build.',
     docs_keys_title: 'How to get the keys',
     docs_keys_body:
-      'OpenAI API is paid and usually requires billing to be configured before normal use. You can check usage and remaining balance on the Usage page. DeepL API Free is free to start with and is commonly described as allowing up to about 500,000 characters per day. The app itself is free, while provider usage is billed separately.',
+      'OpenAI API is paid. In practice you usually add billing or credits first, then create an API key. You can check usage and remaining balance on the Usage page. DeepL API Free is easier to start with and is commonly described as allowing about 500,000 characters per day. The app itself is free, but provider usage is billed separately.',
     docs_admin_title: 'Do you need an OpenAI Admin key?',
     docs_admin_body:
       'Usually no. The Admin key is optional and mainly useful for budget or management-related views.',
     docs_links_title: 'Official links for getting keys',
     docs_link_openai_api: 'OpenAI API key: OpenAI dashboard',
     docs_link_openai_admin: 'OpenAI Admin key: OpenAI admin keys page',
+    docs_link_openai_billing: 'OpenAI Billing: billing setup and credits',
     docs_link_deepl_api: 'DeepL API key: DeepL account keys page',
     docs_link_openai_usage: 'OpenAI Usage: check usage and balance',
     docs_link_deepl_pricing: 'DeepL API: pricing and limits',
@@ -425,6 +432,7 @@ const messages = {
     docs_system_audio_caption_3: 'Choose “Quit & Reopen”.',
     docs_system_audio_caption_4: 'Confirm that the TraLingo.app switch is enabled.',
     docs_system_audio_caption_5: 'Choose “Allow” in the final prompt.',
+    docs_system_audio_caption_6: 'Press Start once more and confirm that transcription begins with system audio enabled.',
     docs_settings_title: 'What each settings screen does',
     docs_settings_body:
       'You can review the model, DeepL, audio, caption, appearance, and budget screens before starting.',
@@ -595,7 +603,7 @@ const messages = {
       '처음 실행한 뒤 무엇부터 설정하면 되는지, 어떤 모드를 먼저 써보면 좋은지 짧고 실용적인 순서로 정리했습니다.',
     docs_step_1_title: '1. OpenAI API 키를 입력합니다',
     docs_step_1_body:
-      'OpenAI 대시보드에서 API 키를 만든 뒤 설정 화면에 입력합니다. 이 키가 없으면 전사를 시작할 수 없습니다.',
+      '먼저 OpenAI Billing에서 결제 설정이나 크레딧을 준비한 뒤 API 키를 만들어 설정 화면에 입력합니다. 이 키가 없으면 전사를 시작할 수 없습니다.',
     docs_step_2_title: '2. 오디오 입력을 고릅니다',
     docs_step_2_body:
       '마이크, 시스템 오디오, 또는 둘 다 켭니다. 파형이 움직이면 입력이 들어오고 있는 상태입니다.',
@@ -608,9 +616,12 @@ const messages = {
     docs_step_5_title: '5. DeepL을 쓰고 싶다면 키를 추가합니다',
     docs_step_5_body:
       'DeepL은 선택 사항입니다. DeepL을 번역 제공사로 고를 때만 DeepL API 키를 추가하면 됩니다.',
-    docs_step_6_title: '6. 처음 마이크를 쓸 때 권한을 허용합니다',
+    docs_step_6_title: '6. 마이크 권한을 허용합니다',
     docs_step_6_body:
-      '처음으로 마이크를 사용할 때는 macOS 권한 허용이 필요합니다. 허용하지 않으면 마이크 입력을 받을 수 없습니다.',
+      '처음 마이크를 켜면 macOS가 권한을 묻습니다. 허용하지 않으면 마이크 전사는 시작되지 않습니다.',
+    docs_step_7_title: '7. 전사가 시작되는지 확인합니다',
+    docs_step_7_body:
+      '권한 허용 뒤 다시 시작 버튼을 눌러 원문 자막이 뜨는지 확인합니다. 자막이 보이면 설정이 끝난 것입니다.',
     docs_shot_1: '여기에 설정 화면 스크린샷 추가',
     docs_shot_2: '여기에 오디오 입력 선택 화면 추가',
     docs_shot_3: '여기에 번역 모드 선택 화면 추가',
@@ -631,13 +642,14 @@ const messages = {
       'macOS가 앱을 열 수 없다고 경고하면 Privacy & Security에서 허용해야 합니다. 이는 미서명 또는 미 notarize 배포에서 흔한 경고입니다.',
     docs_keys_title: 'API 키는 어디서 구하나',
     docs_keys_body:
-      'OpenAI API는 무료가 아니며, 일반적으로 사용 전에 Billing 설정이 필요합니다. 사용량과 잔액은 Usage 페이지에서 확인할 수 있습니다. DeepL API Free는 무료로 시작할 수 있고 하루 50만 자 정도의 상한이 알려져 있습니다. 앱은 무료지만 외부 API 사용료는 별도로 부과됩니다.',
+      'OpenAI API는 유료입니다. 보통 먼저 Billing에서 결제 수단이나 크레딧을 준비한 뒤 API 키를 발급합니다. 사용량과 잔액은 Usage 페이지에서 바로 확인할 수 있습니다. DeepL API Free는 무료로 시작하기 쉬우며 하루 50만 자 정도가 기준으로 알려져 있습니다. 앱은 무료지만 외부 API 사용료는 별도로 부과됩니다.',
     docs_admin_title: 'OpenAI Admin 키가 꼭 필요한가',
     docs_admin_body:
       '보통은 필요 없습니다. Admin 키는 예산이나 관리 기능을 보고 싶을 때만 선택적으로 쓰면 됩니다.',
     docs_links_title: '키 발급에 쓰는 공식 링크',
     docs_link_openai_api: 'OpenAI API 키: OpenAI 대시보드',
     docs_link_openai_admin: 'OpenAI Admin 키: OpenAI 관리 키 화면',
+    docs_link_openai_billing: 'OpenAI Billing: 결제 설정 / 크레딧 추가',
     docs_link_deepl_api: 'DeepL API 키: DeepL 계정 키 화면',
     docs_link_openai_usage: 'OpenAI Usage: 사용량 / 잔액 확인',
     docs_link_deepl_pricing: 'DeepL API: 요금과 제한 확인',
@@ -659,6 +671,7 @@ const messages = {
     docs_system_audio_caption_3: '“Quit & Reopen”을 선택합니다.',
     docs_system_audio_caption_4: 'TraLingo.app 토글이 켜져 있는지 확인합니다.',
     docs_system_audio_caption_5: '마지막 확인에서 “Allow”를 선택합니다.',
+    docs_system_audio_caption_6: '마지막으로 시작 버튼을 눌러 시스템 오디오 전사가 실제로 시작되는지 확인합니다.',
     docs_settings_title: '설정 화면에서 확인할 수 있는 것',
     docs_settings_body:
       '모델, DeepL, 오디오, 자막, 표시, 예산 화면을 한 번씩 확인하고 바로 시작할 수 있습니다.',
@@ -828,7 +841,7 @@ const messages = {
       '这里按最不容易踩坑的顺序说明首次启动后的设置方式。建议先从稳定路径开始，再逐步尝试更高级的模式。',
     docs_step_1_title: '1. 输入 OpenAI API 密钥',
     docs_step_1_body:
-      '先在 OpenAI 控制台创建 API 密钥，再把它填进设置页面。没有这个密钥，就无法开始转录。',
+      '先在 OpenAI Billing 页面准备好计费或额度，再创建 API 密钥并填入设置页面。没有这个密钥，就无法开始转录。',
     docs_step_2_title: '2. 选择音频输入',
     docs_step_2_body:
       '打开麦克风、系统音频或两者。波形动起来，就表示声音已经进入应用。',
@@ -841,9 +854,12 @@ const messages = {
     docs_step_5_title: '5. 如需 DeepL，再添加 DeepL 密钥',
     docs_step_5_body:
       'DeepL 不是必需的。只有在你准备把 DeepL 作为翻译提供方时，才需要额外填写 DeepL API 密钥。',
-    docs_step_6_title: '6. 第一次使用麦克风时的权限许可',
+    docs_step_6_title: '6. 允许麦克风权限',
     docs_step_6_body:
-      '第一次使用麦克风时，需要在 macOS 中允许权限。没有这个权限，就无法使用麦克风输入。',
+      '第一次打开麦克风时，macOS 会请求权限。没有这个权限，麦克风转录不会开始。',
+    docs_step_7_title: '7. 确认转录已经开始',
+    docs_step_7_body:
+      '权限允许后，再按一次开始按钮，确认原文字幕已经出现。只要原文开始流动，就说明设置完成了。',
     docs_shot_1: '这里放设置页面截图',
     docs_shot_2: '这里放音频输入选择截图',
     docs_shot_3: '这里放翻译模式选择截图',
@@ -864,13 +880,14 @@ const messages = {
       '如果 macOS 提示应用无法打开，需要到“隐私与安全性”里手动允许。这是未签名或未 notarize 分发应用常见的提示。',
     docs_keys_title: 'API 密钥怎么获取',
     docs_keys_body:
-      'OpenAI API 不是免费的，正常使用前需要先完成计费设置。使用量和余额可以在 Usage 页面查看。DeepL API Free 可以免费开始使用，但也有字符上限。应用本身免费，外部 API 费用由你的账号承担。',
+      'OpenAI API 不是免费的。通常要先在 Billing 页面完成计费或充值，再创建 API 密钥。使用量和余额可以在 Usage 页面查看。DeepL API Free 更容易上手，可以免费开始，但也有字符上限。应用本身免费，外部 API 费用由你的账号承担。',
     docs_admin_title: 'OpenAI Admin 密钥是否必须',
     docs_admin_body:
       '通常不是必须的。只有在你需要预算或管理相关功能时，才需要额外配置 Admin 密钥。',
     docs_links_title: '获取密钥时可用的官方链接',
     docs_link_openai_api: 'OpenAI API 密钥：OpenAI 控制台',
     docs_link_openai_admin: 'OpenAI Admin 密钥：OpenAI 管理密钥页面',
+    docs_link_openai_billing: 'OpenAI Billing：计费设置与额度',
     docs_link_deepl_api: 'DeepL API 密钥：DeepL 账户密钥页面',
     docs_link_openai_usage: 'OpenAI Usage：查看用量与余额',
     docs_link_deepl_pricing: 'DeepL API：查看价格与限制',
@@ -892,6 +909,7 @@ const messages = {
     docs_system_audio_caption_3: '选择 “Quit & Reopen”。',
     docs_system_audio_caption_4: '确认 TraLingo.app 的开关已经打开。',
     docs_system_audio_caption_5: '在最后的提示里选择 “Allow”。',
+    docs_system_audio_caption_6: '最后再按一次开始按钮，确认系统音频转录已经开始。',
     docs_settings_title: '设置页面里能看到什么',
     docs_settings_body:
       '你可以提前查看模型、DeepL、音频、字幕、显示和预算相关设置，再开始使用。',
@@ -979,14 +997,56 @@ function translatePage(lang) {
 window.addEventListener('DOMContentLoaded', () => {
   const lightbox = document.createElement('div')
   lightbox.className = 'lightbox'
-  lightbox.innerHTML = '<div class="lightbox-frame"><button class="lightbox-close" aria-label="Close">×</button><img alt="Preview" /></div>'
+  lightbox.innerHTML = `
+    <div class="lightbox-frame">
+      <button class="lightbox-close" aria-label="Close">×</button>
+      <button class="lightbox-nav lightbox-prev" aria-label="Previous image">‹</button>
+      <img alt="Preview" />
+      <button class="lightbox-nav lightbox-next" aria-label="Next image">›</button>
+    </div>
+  `
   document.body.appendChild(lightbox)
   const lightboxImage = lightbox.querySelector('img')
   const lightboxFrame = lightbox.querySelector('.lightbox-frame')
   const lightboxClose = lightbox.querySelector('.lightbox-close')
+  const lightboxPrev = lightbox.querySelector('.lightbox-prev')
+  const lightboxNext = lightbox.querySelector('.lightbox-next')
+  const zoomableImages = Array.from(document.querySelectorAll('.zoomable-image')).filter(
+    (node) => node instanceof HTMLImageElement,
+  )
+  let currentIndex = -1
+
+  const renderLightboxImage = (index) => {
+    if (!(lightboxImage instanceof HTMLImageElement)) {
+      return
+    }
+    const image = zoomableImages[index]
+    if (!(image instanceof HTMLImageElement)) {
+      return
+    }
+    currentIndex = index
+    lightboxImage.src = image.src
+    lightboxImage.alt = image.alt
+  }
 
   const closeLightbox = () => {
     lightbox.classList.remove('open')
+    currentIndex = -1
+  }
+
+  const openLightbox = (index) => {
+    renderLightboxImage(index)
+    if (currentIndex >= 0) {
+      lightbox.classList.add('open')
+    }
+  }
+
+  const moveLightbox = (direction) => {
+    if (!zoomableImages.length || currentIndex < 0) {
+      return
+    }
+    const nextIndex = (currentIndex + direction + zoomableImages.length) % zoomableImages.length
+    renderLightboxImage(nextIndex)
   }
 
   const apply = (lang) => {
@@ -1006,23 +1066,26 @@ window.addEventListener('DOMContentLoaded', () => {
     })
   }
 
-  for (const image of document.querySelectorAll('.zoomable-image')) {
+  for (const [index, image] of zoomableImages.entries()) {
     image.addEventListener('click', () => {
-      if (!(image instanceof HTMLImageElement) || !(lightboxImage instanceof HTMLImageElement)) {
-        return
-      }
-      lightboxImage.src = image.src
-      lightboxImage.alt = image.alt
-      lightbox.classList.add('open')
+      openLightbox(index)
     })
   }
 
   lightbox.addEventListener('click', closeLightbox)
   lightboxClose?.addEventListener('click', closeLightbox)
   lightboxFrame?.addEventListener('click', (event) => event.stopPropagation())
+  lightboxPrev?.addEventListener('click', () => moveLightbox(-1))
+  lightboxNext?.addEventListener('click', () => moveLightbox(1))
   window.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') {
       closeLightbox()
+    }
+    if (event.key === 'ArrowLeft') {
+      moveLightbox(-1)
+    }
+    if (event.key === 'ArrowRight') {
+      moveLightbox(1)
     }
   })
 
