@@ -662,6 +662,35 @@ h3 {
   margin-top: 16px;
 }
 
+.screenshot-frame,
+.inline-shot,
+.shot-gallery-card {
+  margin: 0;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(86, 104, 142, 0.14);
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 12px 28px rgba(16, 24, 40, 0.06);
+}
+
+.inline-shot {
+  margin-top: 16px;
+}
+
+.screenshot-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 220ms ease, box-shadow 220ms ease;
+  transform-origin: center center;
+}
+
+.screenshot-frame:hover .screenshot-image,
+.inline-shot:hover .screenshot-image,
+.shot-gallery-card:hover .screenshot-image {
+  transform: scale(1.18);
+}
+
 .site-footer {
   display: flex;
   justify-content: flex-end;
