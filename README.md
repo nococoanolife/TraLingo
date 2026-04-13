@@ -1,5 +1,7 @@
 # TraLingo
 
+Current public release: <!-- release-version:start -->v0.1.7<!-- release-version:end -->
+
 [English](#english) | [日本語](#日本語) | [한국어](#한국어) | [简体中文](#简体中文)
 
 ## English
