@@ -167,8 +167,29 @@ const messages = {
       'OpenAI Admin キーは必須ではありません。予算や管理系の機能を使いたい時だけ設定してください。通常の文字起こしや翻訳だけなら API キーだけで十分です。',
     docs_links_title: 'キー取得に使う公式ページ',
     docs_link_openai_api: 'OpenAI API キー: OpenAI ダッシュボード',
-    docs_link_openai_admin: 'OpenAI Admin キー: OpenAI 管理 API ドキュメント',
-    docs_link_deepl_api: 'DeepL API キー: DeepL 公式ドキュメント',
+    docs_link_openai_admin: 'OpenAI Admin キー: OpenAI 管理キー画面',
+    docs_link_deepl_api: 'DeepL API キー: DeepL アカウントのキー画面',
+    docs_install_eyebrow: 'インストール',
+    docs_install_title: '初回起動までの流れ',
+    docs_install_intro:
+      '初回はダウンロード、起動、macOS の許可まで進める必要があります。ここを済ませれば、次回以降は通常のアプリとして使えます。',
+    docs_install_caption_1: 'GitHub Releases から DMG をダウンロードし、アプリを Applications に移します。',
+    docs_install_caption_2: 'Applications から TraLingo を起動します。',
+    docs_install_caption_3: '最初の警告が出たら「Done」を選びます。',
+    docs_install_caption_4: '「設定 > プライバシーとセキュリティ」を開き、「このまま開く」を選びます。',
+    docs_install_caption_5: '最後の確認ダイアログで「このまま開く」を選びます。',
+    docs_system_audio_eyebrow: 'システム音声の許可',
+    docs_system_audio_title: 'システム音声を使う時の手順',
+    docs_system_audio_intro:
+      'システム音声は macOS 側の許可が必要です。最初だけ数ステップありますが、一度済ませればその後は通常どおり使えます。',
+    docs_system_audio_caption_1: '最初の案内で「Open System Settings」を選びます。',
+    docs_system_audio_caption_2: 'TraLingo.app のトグルをオンにします。',
+    docs_system_audio_caption_3: '「Quit & Reopen」を選びます。',
+    docs_system_audio_caption_4: 'トグルがオンになっていることを確認します。',
+    docs_system_audio_caption_5: '最後の確認で「Allow」を選びます。',
+    docs_settings_title: '設定画面の各項目',
+    docs_settings_body:
+      'モデル、DeepL、オーディオ、字幕、表示、予算まで、一通りの設定画面を確認できます。',
     privacy_eyebrow: 'プライバシー',
     privacy_title: 'データの扱いと通信の考え方',
     privacy_desc:
@@ -378,8 +399,29 @@ const messages = {
       'Usually no. The Admin key is optional and mainly useful for budget or management-related views.',
     docs_links_title: 'Official links for getting keys',
     docs_link_openai_api: 'OpenAI API key: OpenAI dashboard',
-    docs_link_openai_admin: 'OpenAI Admin key: OpenAI admin API docs',
-    docs_link_deepl_api: 'DeepL API key: DeepL official docs',
+    docs_link_openai_admin: 'OpenAI Admin key: OpenAI admin keys page',
+    docs_link_deepl_api: 'DeepL API key: DeepL account keys page',
+    docs_install_eyebrow: 'Install',
+    docs_install_title: 'From download to first launch',
+    docs_install_intro:
+      'The first run includes download, launch, and macOS approval steps. Once you finish them, the app behaves like a normal desktop app.',
+    docs_install_caption_1: 'Download the DMG from GitHub Releases and move the app to Applications.',
+    docs_install_caption_2: 'Launch TraLingo from Applications.',
+    docs_install_caption_3: 'When the first warning appears, choose “Done”.',
+    docs_install_caption_4: 'Open Settings > Privacy & Security and choose “Open Anyway”.',
+    docs_install_caption_5: 'Choose “Open Anyway” again in the final confirmation dialog.',
+    docs_system_audio_eyebrow: 'System audio permission',
+    docs_system_audio_title: 'How to enable system audio',
+    docs_system_audio_intro:
+      'System audio needs an extra macOS permission. It takes a few steps the first time, but only once.',
+    docs_system_audio_caption_1: 'Choose “Open System Settings” in the first prompt.',
+    docs_system_audio_caption_2: 'Turn on the switch for TraLingo.app.',
+    docs_system_audio_caption_3: 'Choose “Quit & Reopen”.',
+    docs_system_audio_caption_4: 'Confirm that the TraLingo.app switch is enabled.',
+    docs_system_audio_caption_5: 'Choose “Allow” in the final prompt.',
+    docs_settings_title: 'What each settings screen does',
+    docs_settings_body:
+      'You can review the model, DeepL, audio, caption, appearance, and budget screens before starting.',
     privacy_eyebrow: 'Privacy',
     privacy_title: 'What is local, what is sent, and how transport works',
     privacy_desc:
@@ -589,8 +631,29 @@ const messages = {
       '보통은 필요 없습니다. Admin 키는 예산이나 관리 기능을 보고 싶을 때만 선택적으로 쓰면 됩니다.',
     docs_links_title: '키 발급에 쓰는 공식 링크',
     docs_link_openai_api: 'OpenAI API 키: OpenAI 대시보드',
-    docs_link_openai_admin: 'OpenAI Admin 키: OpenAI Admin API 문서',
-    docs_link_deepl_api: 'DeepL API 키: DeepL 공식 문서',
+    docs_link_openai_admin: 'OpenAI Admin 키: OpenAI 관리 키 화면',
+    docs_link_deepl_api: 'DeepL API 키: DeepL 계정 키 화면',
+    docs_install_eyebrow: '설치',
+    docs_install_title: '다운로드부터 첫 실행까지',
+    docs_install_intro:
+      '처음에는 다운로드, 실행, macOS 허용 단계가 필요합니다. 한 번만 끝내면 이후에는 일반 앱처럼 사용할 수 있습니다.',
+    docs_install_caption_1: 'GitHub Releases에서 DMG를 내려받고 Applications로 옮깁니다.',
+    docs_install_caption_2: 'Applications에서 TraLingo를 실행합니다.',
+    docs_install_caption_3: '첫 경고가 나오면 “Done”을 선택합니다.',
+    docs_install_caption_4: '설정 > 개인정보 및 보안으로 가서 “Open Anyway”를 선택합니다.',
+    docs_install_caption_5: '마지막 확인 창에서도 “Open Anyway”를 선택합니다.',
+    docs_system_audio_eyebrow: '시스템 오디오 권한',
+    docs_system_audio_title: '시스템 오디오를 켜는 방법',
+    docs_system_audio_intro:
+      '시스템 오디오는 macOS 권한이 따로 필요합니다. 처음만 몇 단계를 거치면 이후에는 계속 사용할 수 있습니다.',
+    docs_system_audio_caption_1: '첫 안내에서 “Open System Settings”를 선택합니다.',
+    docs_system_audio_caption_2: 'TraLingo.app 토글을 켭니다.',
+    docs_system_audio_caption_3: '“Quit & Reopen”을 선택합니다.',
+    docs_system_audio_caption_4: 'TraLingo.app 토글이 켜져 있는지 확인합니다.',
+    docs_system_audio_caption_5: '마지막 확인에서 “Allow”를 선택합니다.',
+    docs_settings_title: '설정 화면에서 확인할 수 있는 것',
+    docs_settings_body:
+      '모델, DeepL, 오디오, 자막, 표시, 예산 화면을 한 번씩 확인하고 바로 시작할 수 있습니다.',
     privacy_eyebrow: '개인정보 처리방침',
     privacy_title: '데이터가 어디에 남고 어디로 전송되는지',
     privacy_desc:
@@ -799,8 +862,29 @@ const messages = {
       '通常不是必须的。只有在你需要预算或管理相关功能时，才需要额外配置 Admin 密钥。',
     docs_links_title: '获取密钥时可用的官方链接',
     docs_link_openai_api: 'OpenAI API 密钥：OpenAI 控制台',
-    docs_link_openai_admin: 'OpenAI Admin 密钥：OpenAI Admin API 文档',
-    docs_link_deepl_api: 'DeepL API 密钥：DeepL 官方文档',
+    docs_link_openai_admin: 'OpenAI Admin 密钥：OpenAI 管理密钥页面',
+    docs_link_deepl_api: 'DeepL API 密钥：DeepL 账户密钥页面',
+    docs_install_eyebrow: '安装',
+    docs_install_title: '从下载到首次启动',
+    docs_install_intro:
+      '第一次使用需要完成下载、启动以及 macOS 的允许步骤。完成一次后，之后就和普通应用一样使用。',
+    docs_install_caption_1: '从 GitHub Releases 下载 DMG，并把应用拖到 Applications。',
+    docs_install_caption_2: '从 Applications 启动 TraLingo。',
+    docs_install_caption_3: '出现第一次警告时，先点 “Done”。',
+    docs_install_caption_4: '打开“设置 > 隐私与安全性”，选择 “Open Anyway”。',
+    docs_install_caption_5: '在最后的确认弹窗里再次选择 “Open Anyway”。',
+    docs_system_audio_eyebrow: '系统音频权限',
+    docs_system_audio_title: '如何开启系统音频',
+    docs_system_audio_intro:
+      '系统音频需要额外的 macOS 权限。第一次会有几个步骤，但只需完成一次。',
+    docs_system_audio_caption_1: '在第一步提示里选择 “Open System Settings”。',
+    docs_system_audio_caption_2: '打开 TraLingo.app 的开关。',
+    docs_system_audio_caption_3: '选择 “Quit & Reopen”。',
+    docs_system_audio_caption_4: '确认 TraLingo.app 的开关已经打开。',
+    docs_system_audio_caption_5: '在最后的提示里选择 “Allow”。',
+    docs_settings_title: '设置页面里能看到什么',
+    docs_settings_body:
+      '你可以提前查看模型、DeepL、音频、字幕、显示和预算相关设置，再开始使用。',
     privacy_eyebrow: '隐私政策',
     privacy_title: '数据会留在哪里，哪些会发到外部',
     privacy_desc:
@@ -883,6 +967,12 @@ function translatePage(lang) {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
+  const lightbox = document.createElement('div')
+  lightbox.className = 'lightbox'
+  lightbox.innerHTML = '<div class="lightbox-frame"><img alt="Preview" /></div>'
+  document.body.appendChild(lightbox)
+  const lightboxImage = lightbox.querySelector('img')
+
   const apply = (lang) => {
     window.localStorage.setItem('tralingo-site-lang', lang)
     const url = new URL(window.location.href)
@@ -897,6 +987,20 @@ window.addEventListener('DOMContentLoaded', () => {
       if (lang && messages[lang]) {
         apply(lang)
       }
+    })
+  }
+
+  for (const image of document.querySelectorAll('.zoomable-image')) {
+    image.addEventListener('mouseenter', () => {
+      if (!(image instanceof HTMLImageElement) || !(lightboxImage instanceof HTMLImageElement)) {
+        return
+      }
+      lightboxImage.src = image.src
+      lightboxImage.alt = image.alt
+      lightbox.classList.add('open')
+    })
+    image.addEventListener('mouseleave', () => {
+      lightbox.classList.remove('open')
     })
   }
 
