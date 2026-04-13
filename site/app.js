@@ -10,9 +10,9 @@ const messages = {
     nav_terms: '利用規約',
     brand_tag: 'リアルタイム文字起こし / 翻訳 / サマリー',
     home_eyebrow: 'macOS デスクトップアプリ',
-    home_title: '話している内容を、その場で読める字幕に変える。',
+    home_title: 'あらゆる音声をリアルタイムで文字起こし＆翻訳します。',
     home_lede:
-      'TraLingo は、マイクとシステム音声を取り込み、原文と翻訳文を同時に表示し、今見えている字幕からそのままサマリーまで作れる macOS アプリです。',
+      'TraLingo は OpenAI のリアルタイムモデルを活用し、マイクやシステム音声を低遅延で文字起こし・翻訳できる macOS アプリです。アプリ自体は無料ですが、OpenAI や DeepL の API 利用料は別途かかり、API キーは自分で用意する必要があります。',
     home_point_1: 'マイク + システム音声',
     home_point_2: '原文 + 翻訳を同時表示',
     home_point_3: 'サマリー + 書き出し',
@@ -70,7 +70,7 @@ const messages = {
       'そこで自分で作ってみたところ、想定以上にうまく動き、速度も精度も日常で十分使える水準まで仕上がりました。公開してフィードバックを受け取りながら改善を続け、言語の壁を少しでも下げる手助けができればと考えています。',
     home_download_title: 'すぐ試す',
     home_download_body:
-      '最新版の macOS アプリは GitHub Releases から入手できます。更新履歴や issue も同じ場所で確認できます。',
+      '最新版の macOS アプリは GitHub Releases から入手できます。アプリは無料ですが、利用には OpenAI または DeepL の API キーが必要です。',
     home_download_primary: 'ダウンロード',
     home_download_secondary: 'GitHub',
     support_eyebrow: 'Support TraLingo',
@@ -161,12 +161,14 @@ const messages = {
       '初回起動時に macOS から「開けません」と警告された場合は、「プライバシーとセキュリティ」から許可してください。これは未 notarize 配布であることによる macOS の通常の警告です。',
     docs_keys_title: 'OpenAI API キーと DeepL キーの入手方法',
     docs_keys_body:
-      'OpenAI API は無料ではなく、利用前に課金設定が必要です。利用状況や残高は Usage ページで確認できます。DeepL API Free は無料で使えますが、利用上限があります。アプリ自体は無料でも、外部 API の利用料は各サービス側で発生します。',
+      'OpenAI API は有料で、通常は先に課金設定が必要です。利用状況や残高は Usage ページで確認できます。DeepL API Free は無料で始められ、1 日あたり 50 万文字までが目安です。アプリ自体は無料でも、外部 API の利用料は各サービス側で発生します。',
     docs_admin_title: 'OpenAI Admin キーは必要か',
     docs_admin_body:
       'OpenAI Admin キーは必須ではありません。予算や管理系の機能を使いたい時だけ設定してください。通常の文字起こしや翻訳だけなら API キーだけで十分です。',
     docs_links_title: 'キー取得に使う公式ページ',
-    docs_link_openai_api: 'OpenAI API キー: OpenAI ダッシュボード',
+    docs_link_openai_api: 'OpenAI API キー: OpenAI ダッシュボード'
+    ,docs_link_openai_usage: 'OpenAI Usage: 利用状況 / 残高の確認'
+    ,docs_link_deepl_pricing: 'DeepL API: 料金と利用上限の確認',
     docs_link_openai_admin: 'OpenAI Admin キー: OpenAI 管理キー画面',
     docs_link_deepl_api: 'DeepL API キー: DeepL アカウントのキー画面',
     docs_link_openai_usage: 'OpenAI Usage: 利用状況 / 残高の確認',
@@ -244,9 +246,9 @@ const messages = {
     nav_terms: 'Terms',
     brand_tag: 'Realtime transcription / translation / summaries',
     home_eyebrow: 'macOS desktop app',
-    home_title: 'Turn live speech into captions you can read and reuse.',
+    home_title: 'Transcribe and translate any audio in real time.',
     home_lede:
-      'TraLingo captures microphone and system audio, keeps the original line and translated line on the same screen, and generates summaries from the captions you are already looking at.',
+      'TraLingo uses OpenAI realtime models to process microphone and system audio with low latency on macOS. The app itself is free, but OpenAI or DeepL API usage is billed separately and you need your own API keys.',
     home_point_1: 'Mic + system audio',
     home_point_2: 'Original + translation together',
     home_point_3: 'Summary + export',
@@ -304,7 +306,7 @@ const messages = {
       'So I built it. The result worked better than I expected, and both the speed and accuracy reached a level I was willing to use in daily work. I decided to publish it, gather feedback, and keep improving it so it can help reduce language barriers in real situations.',
     home_download_title: 'Get the app',
     home_download_body:
-      'The latest macOS build is distributed through GitHub Releases. The repository and issue tracker are right next to the download path.',
+      'The latest macOS build is distributed through GitHub Releases. The app is free, but you need your own OpenAI or DeepL API key to use the cloud features.',
     home_download_primary: 'Download',
     home_download_secondary: 'GitHub',
     support_eyebrow: 'Support TraLingo',
@@ -395,7 +397,7 @@ const messages = {
       'If macOS says the app cannot be opened, approve it from Privacy & Security. This is the normal warning for an unsigned or non-notarized distribution build.',
     docs_keys_title: 'How to get the keys',
     docs_keys_body:
-      'OpenAI API is paid and requires billing to be configured before normal use. You can check usage and remaining balance on the Usage page. DeepL API Free is free to start with but has a character limit. The app itself is free, while provider usage is billed separately.',
+      'OpenAI API is paid and usually requires billing to be configured before normal use. You can check usage and remaining balance on the Usage page. DeepL API Free is free to start with and is commonly described as allowing up to about 500,000 characters per day. The app itself is free, while provider usage is billed separately.',
     docs_admin_title: 'Do you need an OpenAI Admin key?',
     docs_admin_body:
       'Usually no. The Admin key is optional and mainly useful for budget or management-related views.',
@@ -478,9 +480,9 @@ const messages = {
     nav_terms: '이용약관',
     brand_tag: '실시간 전사 / 번역 / 요약',
     home_eyebrow: 'macOS 데스크톱 앱',
-    home_title: '들리는 말을, 바로 읽을 수 있는 자막으로 바꿉니다.',
+    home_title: '모든 오디오를 실시간으로 전사하고 번역합니다.',
     home_lede:
-      'TraLingo는 마이크와 시스템 오디오를 받아 원문과 번역문을 같은 화면에 두고, 지금 보이는 자막으로 바로 요약까지 만들 수 있는 macOS 앱입니다.',
+      'TraLingo는 OpenAI 실시간 모델을 활용해 마이크와 시스템 오디오를 낮은 지연으로 전사하고 번역하는 macOS 앱입니다. 앱 자체는 무료지만 OpenAI나 DeepL API 사용료는 별도이며, API 키는 직접 준비해야 합니다.',
     home_point_1: '마이크 + 시스템 오디오',
     home_point_2: '원문 + 번역 동시 표시',
     home_point_3: '요약 + 내보내기',
@@ -538,7 +540,7 @@ const messages = {
       '그래서 직접 만들었습니다. 예상보다 훨씬 잘 동작했고, 속도와 정확도도 일상 업무에서 충분히 쓸 수 있는 수준까지 올라왔습니다. 먼저 공개해서 피드백을 받고, 계속 다듬으면서 언어 장벽을 낮추는 데 도움이 되길 바라고 있습니다.',
     home_download_title: '바로 써보기',
     home_download_body:
-      '최신 macOS 빌드는 GitHub Releases에서 받을 수 있습니다. 업데이트 기록과 이슈도 같은 경로에서 확인할 수 있습니다.',
+      '최신 macOS 빌드는 GitHub Releases에서 받을 수 있습니다. 앱은 무료지만 클라우드 기능을 쓰려면 OpenAI 또는 DeepL API 키가 필요합니다.',
     home_download_primary: '다운로드',
     home_download_secondary: 'GitHub',
     support_eyebrow: 'Support TraLingo',
@@ -629,7 +631,7 @@ const messages = {
       'macOS가 앱을 열 수 없다고 경고하면 Privacy & Security에서 허용해야 합니다. 이는 미서명 또는 미 notarize 배포에서 흔한 경고입니다.',
     docs_keys_title: 'API 키는 어디서 구하나',
     docs_keys_body:
-      'OpenAI API는 무료가 아니며, 정상 사용 전에 결제 설정이 필요합니다. 사용량과 잔액은 Usage 페이지에서 확인할 수 있습니다. DeepL API Free는 무료로 시작할 수 있지만 사용량 제한이 있습니다. 앱은 무료지만 외부 API 사용료는 별도로 부과됩니다.',
+      'OpenAI API는 무료가 아니며, 일반적으로 사용 전에 Billing 설정이 필요합니다. 사용량과 잔액은 Usage 페이지에서 확인할 수 있습니다. DeepL API Free는 무료로 시작할 수 있고 하루 50만 자 정도의 상한이 알려져 있습니다. 앱은 무료지만 외부 API 사용료는 별도로 부과됩니다.',
     docs_admin_title: 'OpenAI Admin 키가 꼭 필요한가',
     docs_admin_body:
       '보통은 필요 없습니다. Admin 키는 예산이나 관리 기능을 보고 싶을 때만 선택적으로 쓰면 됩니다.',
@@ -711,9 +713,9 @@ const messages = {
     nav_terms: '使用条款',
     brand_tag: '实时转录 / 翻译 / 摘要',
     home_eyebrow: 'macOS 桌面应用',
-    home_title: '把正在说的话，变成当场就能读懂的字幕。',
+    home_title: '把各种音频实时转成文字并翻译。',
     home_lede:
-      'TraLingo 会同时接收麦克风和系统音频，把原文和译文放在同一屏幕上，并根据当前可见字幕直接生成摘要。',
+      'TraLingo 使用 OpenAI 实时模型，在 macOS 上以低延迟处理麦克风和系统音频的转录与翻译。应用本身免费，但 OpenAI 或 DeepL 的 API 调用费用需要另外承担，API 密钥也需要自己准备。',
     home_point_1: '麦克风 + 系统音频',
     home_point_2: '原文 + 翻译同屏',
     home_point_3: '摘要 + 导出',
@@ -771,7 +773,7 @@ const messages = {
       '后来我直接自己做了一个。结果比预想中更好，速度和精度都到了我愿意日常使用的程度。所以我决定把它公开出来，持续收集反馈、继续打磨，希望它能帮助更多人降低语言带来的门槛。',
     home_download_title: '马上试用',
     home_download_body:
-      '最新版 macOS 应用通过 GitHub Releases 发布，更新记录和 issue 也在同一个地方。',
+      '最新版 macOS 应用通过 GitHub Releases 发布。应用本身免费，但要使用云端功能，需要你自己的 OpenAI 或 DeepL API 密钥。',
     home_download_primary: '下载',
     home_download_secondary: 'GitHub',
     support_eyebrow: 'Support TraLingo',
