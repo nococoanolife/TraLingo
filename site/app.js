@@ -113,9 +113,9 @@ const messages = {
     features_card_10_body:
       '現在のモデル構成と想定コストを確認しながら使えるので、速度・品質・費用のバランスを見ながら選べます。',
     screenshots_eyebrow: '画面イメージ',
-    screenshots_title: '画面イメージを追加予定',
+    screenshots_title: '実際の画面で使い方を確認できます',
     screenshots_body:
-      'ここには実際の利用シーンに合わせたスクリーンショットを追加できます。まずは差し替え用のスペースを用意しています。',
+      '字幕画面、設定画面、予算画面、ドッキング表示まで、実際の画面を見ながら使い方をイメージできます。',
     screenshots_slot_1: 'ここにホーム画面のスクリーンショットを追加',
     screenshots_slot_2: 'ここに翻訳中の画面を追加',
     screenshots_slot_3: 'ここにサマリー / 書き出し画面を追加',
@@ -125,7 +125,7 @@ const messages = {
       '設定から開始までの流れを、初めてでも迷いにくい順番でまとめています。まずは一方向で試し、慣れてから双方向や DeepL を加えるのがおすすめです。',
     docs_step_1_title: '1. OpenAI API キーを設定する',
     docs_step_1_body:
-      'まず OpenAI の管理画面で API キーを作成し、設定画面の「モデルと接続」に入力します。文字起こしや翻訳の多くは、このキーがないと動きません。',
+      'まず OpenAI の管理画面で API キーを作成し、設定画面の「モデルと接続」に入力します。API キーがないと文字起こし開始ボタンを押しても処理は始まりません。',
     docs_step_2_title: '2. 使う音声入力を選ぶ',
     docs_step_2_body:
       '会議ならマイク、動画や配信ならシステム音声、両方を追いたいなら両方をオンにします。波形が動いていれば入力されています。',
@@ -138,9 +138,9 @@ const messages = {
     docs_step_5_title: '5. 必要なら DeepL キーも追加する',
     docs_step_5_body:
       'DeepL を翻訳に使いたい場合は、DeepL の API キーを発行して追加します。DeepL を選ばないなら、この設定は不要です。',
-    docs_step_6_title: '6. 権限の許可を完了する',
+    docs_step_6_title: '6. 初めてマイクを使う時の権限許可',
     docs_step_6_body:
-      'Apple Developer 登録済みアプリではないため、初回起動時に macOS の「プライバシーとセキュリティ」で許可が必要になる場合があります。文字起こし開始時には、マイクやシステム音声の利用に応じて個別の許可も必要です。',
+      '初めてマイクを使う時は macOS の許可が必要です。許可しないとマイク入力は使えません。',
     docs_shot_1: '設定画面のスクリーンショットをここに追加',
     docs_shot_2: 'オーディオ入力の選択画面をここに追加',
     docs_shot_3: '翻訳モードの選択画面をここに追加',
@@ -161,7 +161,7 @@ const messages = {
       '初回起動時に macOS から「開けません」と警告された場合は、「プライバシーとセキュリティ」から許可してください。これは未 notarize 配布であることによる macOS の通常の警告です。',
     docs_keys_title: 'OpenAI API キーと DeepL キーの入手方法',
     docs_keys_body:
-      'OpenAI API キーは OpenAI のダッシュボードで発行します。DeepL API キーは DeepL アカウントの API 管理画面で発行します。アプリ自体は無料ですが、API 利用料は OpenAI / DeepL 側で別途発生します。',
+      'OpenAI API は無料ではなく、利用前に課金設定が必要です。利用状況や残高は Usage ページで確認できます。DeepL API Free は無料で使えますが、利用上限があります。アプリ自体は無料でも、外部 API の利用料は各サービス側で発生します。',
     docs_admin_title: 'OpenAI Admin キーは必要か',
     docs_admin_body:
       'OpenAI Admin キーは必須ではありません。予算や管理系の機能を使いたい時だけ設定してください。通常の文字起こしや翻訳だけなら API キーだけで十分です。',
@@ -169,6 +169,8 @@ const messages = {
     docs_link_openai_api: 'OpenAI API キー: OpenAI ダッシュボード',
     docs_link_openai_admin: 'OpenAI Admin キー: OpenAI 管理キー画面',
     docs_link_deepl_api: 'DeepL API キー: DeepL アカウントのキー画面',
+    docs_link_openai_usage: 'OpenAI Usage: 利用状況 / 残高の確認',
+    docs_link_deepl_pricing: 'DeepL API: 料金と上限の確認',
     docs_install_eyebrow: 'インストール',
     docs_install_title: '初回起動までの流れ',
     docs_install_intro:
@@ -345,9 +347,9 @@ const messages = {
     features_card_10_body:
       'See which models are active and compare rough cost expectations before you start a session.',
     screenshots_eyebrow: 'Screenshots',
-    screenshots_title: 'Reserved space for real screenshots',
+    screenshots_title: 'See the real interface',
     screenshots_body:
-      'These blocks are placeholders so you can later add the most persuasive screenshots without changing the page structure.',
+      'These screenshots show the actual caption view, settings screens, budget screen, and docking layouts so first-time users can understand the app quickly.',
     screenshots_slot_1: 'Add the home screen screenshot here',
     screenshots_slot_2: 'Add an in-session translation screenshot here',
     screenshots_slot_3: 'Add a summary or export screenshot here',
@@ -357,7 +359,7 @@ const messages = {
       'This guide focuses on the shortest path from first launch to a working session. Start with the stable path, then add more advanced options later.',
     docs_step_1_title: '1. Add your OpenAI API key',
     docs_step_1_body:
-      'Create an OpenAI API key in your OpenAI dashboard, then paste it into Settings. Most transcription and translation paths depend on this key.',
+      'Create an OpenAI API key in your OpenAI dashboard, then paste it into Settings. Transcription cannot start without this key.',
     docs_step_2_title: '2. Choose the audio input',
     docs_step_2_body:
       'Turn on Microphone, System Audio, or both. If the waveform moves, the app is receiving sound.',
@@ -370,9 +372,9 @@ const messages = {
     docs_step_5_title: '5. Add a DeepL key if you want DeepL',
     docs_step_5_body:
       'DeepL is optional. Only add a DeepL API key if you plan to choose DeepL as the translation provider.',
-    docs_step_6_title: '6. Approve macOS permissions',
+    docs_step_6_title: '6. Allow microphone access the first time',
     docs_step_6_body:
-      'Because the app is not distributed with Apple Developer notarization yet, macOS may ask you to approve it in Privacy & Security. You will also need to allow microphone and system-audio related permissions when you first start using those inputs.',
+      'The first time you use the microphone, macOS will ask for permission. Without that permission, microphone input will not work.',
     docs_shot_1: 'Place the settings screenshot here',
     docs_shot_2: 'Place the audio input screenshot here',
     docs_shot_3: 'Place the translation mode screenshot here',
@@ -393,7 +395,7 @@ const messages = {
       'If macOS says the app cannot be opened, approve it from Privacy & Security. This is the normal warning for an unsigned or non-notarized distribution build.',
     docs_keys_title: 'How to get the keys',
     docs_keys_body:
-      'Get the OpenAI API key from the OpenAI dashboard. Get the DeepL API key from the DeepL account API page. The app is free, but OpenAI or DeepL usage is billed separately under your own account.',
+      'OpenAI API is paid and requires billing to be configured before normal use. You can check usage and remaining balance on the Usage page. DeepL API Free is free to start with but has a character limit. The app itself is free, while provider usage is billed separately.',
     docs_admin_title: 'Do you need an OpenAI Admin key?',
     docs_admin_body:
       'Usually no. The Admin key is optional and mainly useful for budget or management-related views.',
@@ -401,6 +403,8 @@ const messages = {
     docs_link_openai_api: 'OpenAI API key: OpenAI dashboard',
     docs_link_openai_admin: 'OpenAI Admin key: OpenAI admin keys page',
     docs_link_deepl_api: 'DeepL API key: DeepL account keys page',
+    docs_link_openai_usage: 'OpenAI Usage: check usage and balance',
+    docs_link_deepl_pricing: 'DeepL API: pricing and limits',
     docs_install_eyebrow: 'Install',
     docs_install_title: 'From download to first launch',
     docs_install_intro:
@@ -577,9 +581,9 @@ const messages = {
     features_card_10_body:
       '현재 사용하는 모델과 예상 비용을 보면서 속도, 품질, 비용 사이의 균형을 잡을 수 있습니다.',
     screenshots_eyebrow: '스크린샷',
-    screenshots_title: '실제 화면을 넣을 자리',
+    screenshots_title: '실제 화면으로 사용 흐름을 확인할 수 있습니다',
     screenshots_body:
-      '나중에 가장 설득력 있는 실제 스크린샷을 넣을 수 있도록 자리만 먼저 확보해 두었습니다.',
+      '자막 화면, 설정 화면, 예산 화면, 도킹 레이아웃까지 실제 화면으로 확인할 수 있도록 구성했습니다.',
     screenshots_slot_1: '여기에 홈 화면 스크린샷 추가',
     screenshots_slot_2: '여기에 번역 중 화면 추가',
     screenshots_slot_3: '여기에 요약 / 내보내기 화면 추가',
@@ -589,7 +593,7 @@ const messages = {
       '처음 실행한 뒤 무엇부터 설정하면 되는지, 어떤 모드를 먼저 써보면 좋은지 짧고 실용적인 순서로 정리했습니다.',
     docs_step_1_title: '1. OpenAI API 키를 입력합니다',
     docs_step_1_body:
-      'OpenAI 대시보드에서 API 키를 만든 뒤 설정 화면에 입력합니다. 대부분의 전사와 번역 흐름은 이 키가 있어야 동작합니다.',
+      'OpenAI 대시보드에서 API 키를 만든 뒤 설정 화면에 입력합니다. 이 키가 없으면 전사를 시작할 수 없습니다.',
     docs_step_2_title: '2. 오디오 입력을 고릅니다',
     docs_step_2_body:
       '마이크, 시스템 오디오, 또는 둘 다 켭니다. 파형이 움직이면 입력이 들어오고 있는 상태입니다.',
@@ -602,9 +606,9 @@ const messages = {
     docs_step_5_title: '5. DeepL을 쓰고 싶다면 키를 추가합니다',
     docs_step_5_body:
       'DeepL은 선택 사항입니다. DeepL을 번역 제공사로 고를 때만 DeepL API 키를 추가하면 됩니다.',
-    docs_step_6_title: '6. macOS 권한을 허용합니다',
+    docs_step_6_title: '6. 처음 마이크를 쓸 때 권한을 허용합니다',
     docs_step_6_body:
-      'Apple Developer 등록 배포가 아니기 때문에 처음 실행할 때 Privacy & Security에서 허용이 필요할 수 있습니다. 마이크나 시스템 오디오를 처음 사용할 때도 각각 권한 허용이 필요합니다.',
+      '처음으로 마이크를 사용할 때는 macOS 권한 허용이 필요합니다. 허용하지 않으면 마이크 입력을 받을 수 없습니다.',
     docs_shot_1: '여기에 설정 화면 스크린샷 추가',
     docs_shot_2: '여기에 오디오 입력 선택 화면 추가',
     docs_shot_3: '여기에 번역 모드 선택 화면 추가',
@@ -625,7 +629,7 @@ const messages = {
       'macOS가 앱을 열 수 없다고 경고하면 Privacy & Security에서 허용해야 합니다. 이는 미서명 또는 미 notarize 배포에서 흔한 경고입니다.',
     docs_keys_title: 'API 키는 어디서 구하나',
     docs_keys_body:
-      'OpenAI API 키는 OpenAI 대시보드에서, DeepL API 키는 DeepL 계정의 API 페이지에서 발급합니다. 앱은 무료지만 OpenAI나 DeepL 사용료는 별도로 부과됩니다.',
+      'OpenAI API는 무료가 아니며, 정상 사용 전에 결제 설정이 필요합니다. 사용량과 잔액은 Usage 페이지에서 확인할 수 있습니다. DeepL API Free는 무료로 시작할 수 있지만 사용량 제한이 있습니다. 앱은 무료지만 외부 API 사용료는 별도로 부과됩니다.',
     docs_admin_title: 'OpenAI Admin 키가 꼭 필요한가',
     docs_admin_body:
       '보통은 필요 없습니다. Admin 키는 예산이나 관리 기능을 보고 싶을 때만 선택적으로 쓰면 됩니다.',
@@ -633,6 +637,8 @@ const messages = {
     docs_link_openai_api: 'OpenAI API 키: OpenAI 대시보드',
     docs_link_openai_admin: 'OpenAI Admin 키: OpenAI 관리 키 화면',
     docs_link_deepl_api: 'DeepL API 키: DeepL 계정 키 화면',
+    docs_link_openai_usage: 'OpenAI Usage: 사용량 / 잔액 확인',
+    docs_link_deepl_pricing: 'DeepL API: 요금과 제한 확인',
     docs_install_eyebrow: '설치',
     docs_install_title: '다운로드부터 첫 실행까지',
     docs_install_intro:
@@ -808,9 +814,9 @@ const messages = {
     features_card_10_body:
       '开始之前就能看到当前模型组合与大致成本，更方便在速度、质量和费用之间做取舍。',
     screenshots_eyebrow: '截图',
-    screenshots_title: '预留真实截图位置',
+    screenshots_title: '可以直接查看真实界面',
     screenshots_body:
-      '这里先预留位置，后面可以直接替换成最能说明用途的真实应用截图。',
+      '这里展示的是实际字幕页面、设置页面、预算页面和停靠布局，方便第一次接触时快速理解怎么使用。',
     screenshots_slot_1: '这里放首页截图',
     screenshots_slot_2: '这里放翻译进行中的截图',
     screenshots_slot_3: '这里放摘要或导出截图',
@@ -820,7 +826,7 @@ const messages = {
       '这里按最不容易踩坑的顺序说明首次启动后的设置方式。建议先从稳定路径开始，再逐步尝试更高级的模式。',
     docs_step_1_title: '1. 输入 OpenAI API 密钥',
     docs_step_1_body:
-      '先在 OpenAI 控制台创建 API 密钥，再把它填进设置页面。大多数转录和翻译功能都依赖这个密钥。',
+      '先在 OpenAI 控制台创建 API 密钥，再把它填进设置页面。没有这个密钥，就无法开始转录。',
     docs_step_2_title: '2. 选择音频输入',
     docs_step_2_body:
       '打开麦克风、系统音频或两者。波形动起来，就表示声音已经进入应用。',
@@ -833,9 +839,9 @@ const messages = {
     docs_step_5_title: '5. 如需 DeepL，再添加 DeepL 密钥',
     docs_step_5_body:
       'DeepL 不是必需的。只有在你准备把 DeepL 作为翻译提供方时，才需要额外填写 DeepL API 密钥。',
-    docs_step_6_title: '6. 完成 macOS 权限许可',
+    docs_step_6_title: '6. 第一次使用麦克风时的权限许可',
     docs_step_6_body:
-      '由于当前不是 Apple Developer notarization 分发，首次启动时可能需要在“隐私与安全性”里手动允许。第一次使用麦克风或系统音频时，也需要分别授权。',
+      '第一次使用麦克风时，需要在 macOS 中允许权限。没有这个权限，就无法使用麦克风输入。',
     docs_shot_1: '这里放设置页面截图',
     docs_shot_2: '这里放音频输入选择截图',
     docs_shot_3: '这里放翻译模式选择截图',
@@ -856,7 +862,7 @@ const messages = {
       '如果 macOS 提示应用无法打开，需要到“隐私与安全性”里手动允许。这是未签名或未 notarize 分发应用常见的提示。',
     docs_keys_title: 'API 密钥怎么获取',
     docs_keys_body:
-      'OpenAI API 密钥从 OpenAI 控制台获取，DeepL API 密钥从 DeepL 账户的 API 页面获取。应用本身免费，但 OpenAI 或 DeepL 的调用费用需要由你自己的账号承担。',
+      'OpenAI API 不是免费的，正常使用前需要先完成计费设置。使用量和余额可以在 Usage 页面查看。DeepL API Free 可以免费开始使用，但也有字符上限。应用本身免费，外部 API 费用由你的账号承担。',
     docs_admin_title: 'OpenAI Admin 密钥是否必须',
     docs_admin_body:
       '通常不是必须的。只有在你需要预算或管理相关功能时，才需要额外配置 Admin 密钥。',
@@ -864,6 +870,8 @@ const messages = {
     docs_link_openai_api: 'OpenAI API 密钥：OpenAI 控制台',
     docs_link_openai_admin: 'OpenAI Admin 密钥：OpenAI 管理密钥页面',
     docs_link_deepl_api: 'DeepL API 密钥：DeepL 账户密钥页面',
+    docs_link_openai_usage: 'OpenAI Usage：查看用量与余额',
+    docs_link_deepl_pricing: 'DeepL API：查看价格与限制',
     docs_install_eyebrow: '安装',
     docs_install_title: '从下载到首次启动',
     docs_install_intro:
@@ -969,9 +977,15 @@ function translatePage(lang) {
 window.addEventListener('DOMContentLoaded', () => {
   const lightbox = document.createElement('div')
   lightbox.className = 'lightbox'
-  lightbox.innerHTML = '<div class="lightbox-frame"><img alt="Preview" /></div>'
+  lightbox.innerHTML = '<div class="lightbox-frame"><button class="lightbox-close" aria-label="Close">×</button><img alt="Preview" /></div>'
   document.body.appendChild(lightbox)
   const lightboxImage = lightbox.querySelector('img')
+  const lightboxFrame = lightbox.querySelector('.lightbox-frame')
+  const lightboxClose = lightbox.querySelector('.lightbox-close')
+
+  const closeLightbox = () => {
+    lightbox.classList.remove('open')
+  }
 
   const apply = (lang) => {
     window.localStorage.setItem('tralingo-site-lang', lang)
@@ -991,7 +1005,7 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
   for (const image of document.querySelectorAll('.zoomable-image')) {
-    image.addEventListener('mouseenter', () => {
+    image.addEventListener('click', () => {
       if (!(image instanceof HTMLImageElement) || !(lightboxImage instanceof HTMLImageElement)) {
         return
       }
@@ -999,10 +1013,16 @@ window.addEventListener('DOMContentLoaded', () => {
       lightboxImage.alt = image.alt
       lightbox.classList.add('open')
     })
-    image.addEventListener('mouseleave', () => {
-      lightbox.classList.remove('open')
-    })
   }
+
+  lightbox.addEventListener('click', closeLightbox)
+  lightboxClose?.addEventListener('click', closeLightbox)
+  lightboxFrame?.addEventListener('click', (event) => event.stopPropagation())
+  window.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      closeLightbox()
+    }
+  })
 
   translatePage(currentLang())
 })
