@@ -216,6 +216,11 @@ h3 {
   font-size: 16px;
 }
 
+.lede--single-line {
+  max-width: none;
+  white-space: nowrap;
+}
+
 .hero-points,
 .cta-row,
 .download-actions,
@@ -612,6 +617,10 @@ h3 {
   gap: 18px;
 }
 
+.origin-section {
+  margin-top: 88px;
+}
+
 .download-grid {
   grid-template-columns: minmax(0, 1.3fr) minmax(320px, 0.7fr);
 }
@@ -862,6 +871,10 @@ h3 {
   .origin-grid,
   .download-grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .lede--single-line {
+    white-space: normal;
   }
 }
 

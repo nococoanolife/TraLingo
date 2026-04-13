@@ -81,7 +81,7 @@ const messages = {
     features_eyebrow: '機能',
     features_title: 'できること',
     features_intro:
-      'TraLingo は、聞き取る、翻訳する、あとで使える形で残す、という流れを一つの画面で完結させるためのアプリです。',
+      'TraLingo は、聞く・訳す・残すを一つの画面でつなげる macOS アプリです。',
     features_card_1_title: '原文と翻訳を同時に見る',
     features_card_1_body:
       '訳文だけでなく原文も残すので、意訳に引っ張られすぎず、自分で確認しながら理解できます。',
@@ -122,7 +122,7 @@ const messages = {
     docs_eyebrow: '使い方',
     docs_title: '初めて使う人向けガイド',
     docs_intro:
-      '設定から開始までの流れを、初めてでも迷いにくい順番でまとめています。まずは一方向で試し、慣れてから双方向や DeepL を加えるのがおすすめです。',
+      '最初の設定から開始までを、初めてでも迷いにくい順番でまとめています。',
     docs_step_1_title: '1. OpenAI API キーを設定する',
     docs_step_1_body:
       'まず OpenAI の Billing で支払い設定やクレジットを用意し、その後で API キーを作成して設定画面の「モデルと接続」に入力します。API キーがないと文字起こしは開始できません。',
@@ -215,7 +215,7 @@ const messages = {
       'TraLingo は、送信先を選択した provider に限定し、通常は音声ファイルをローカル保存しないようにしています。ただし、あなたの Mac 自体がマルウェア感染している場合や、OS アカウントが侵害されている場合まで防げるわけではありません。OpenAI は business data ページで、顧客の business data は既定で学習に使わないと案内していますが、クラウド処理そのものは行われます。機密情報を扱うかどうかは、利用者自身で判断してください。',
     privacy_analytics_title: 'Aptabase による匿名の利用分析',
     privacy_analytics_body:
-      'アプリでは任意で Aptabase の匿名分析を有効にできます。どの画面や機能が使われているか、どこで不具合が起きているかを把握するためのもので、設定からオフにできます。デフォルトで有効にしない前提で運用し、内容は改善目的に限ります。',
+      'アプリでは Aptabase の匿名分析を使って、どの画面や機能が使われているか、どこで不具合が起きているかを把握します。設定からオフにできます。内容は改善目的に限ります。',
     tokusho_title: '特定商取引法に基づく表記',
     tokusho_desc:
       '現在は GitHub Releases を中心にアプリを配布しています。このページでは、運営情報と問い合わせ先を公開しています。',
@@ -320,7 +320,7 @@ const messages = {
     features_eyebrow: 'Features',
     features_title: 'What the app can do',
     features_intro:
-      'TraLingo is built to help you understand live multilingual speech, confirm that audio is flowing, and leave with something useful afterwards.',
+      'TraLingo is a macOS app that keeps listening, translating, and saving in one flow.',
     features_card_1_title: 'Read original and translated captions side by side',
     features_card_1_body:
       'You can keep the translated line in view without losing the original wording, which helps with names, nuance, and technical terms.',
@@ -361,7 +361,7 @@ const messages = {
     docs_eyebrow: 'Docs',
     docs_title: 'A practical guide for first-time users',
     docs_intro:
-      'This guide focuses on the shortest path from first launch to a working session. Start with the stable path, then add more advanced options later.',
+      'This guide walks from first setup to a working session in the simplest order.',
     docs_step_1_title: '1. Add your OpenAI API key',
     docs_step_1_body:
       'First set up billing or credits in OpenAI, then create an API key and paste it into Settings. Transcription cannot start without this key.',
@@ -454,7 +454,7 @@ const messages = {
       'TLS protects the connection while data is traveling over the network. It does not protect you from malware on your Mac, a compromised operating-system account, or sending data to a cloud provider you enabled yourself. OpenAI states on its business data page that customer business data is not used to train models by default, but cloud processing still happens when you use those services.',
     privacy_analytics_title: 'Anonymous analytics with Aptabase',
     privacy_analytics_body:
-      'The app can optionally send anonymous analytics to Aptabase so the developer can understand which features are used and where failures happen. It is intended for product improvement and can be turned off in Settings.',
+      'The app uses Aptabase for anonymous analytics so the developer can see which features are used and where failures happen. It can be turned off in Settings and is used only for product improvement.',
     tokusho_title: 'Commerce Disclosure',
     tokusho_desc:
       'The app is currently distributed through GitHub Releases. This page provides operator and contact information.',
@@ -559,7 +559,7 @@ const messages = {
     features_eyebrow: '기능',
     features_title: '할 수 있는 일',
     features_intro:
-      'TraLingo는 듣기, 번역 보기, 나중에 다시 쓰기까지 한 화면에서 이어지도록 설계된 앱입니다.',
+      'TraLingo는 듣기, 번역, 정리를 한 화면에서 이어서 할 수 있게 만든 macOS 앱입니다.',
     features_card_1_title: '원문과 번역을 동시에 보기',
     features_card_1_body:
       '번역을 보면서도 원문을 확인할 수 있어 의미 차이와 고유명사를 놓치기 어렵습니다.',
@@ -600,7 +600,7 @@ const messages = {
     docs_eyebrow: '사용 방법',
     docs_title: '처음 쓰는 사람을 위한 가이드',
     docs_intro:
-      '처음 실행한 뒤 무엇부터 설정하면 되는지, 어떤 모드를 먼저 써보면 좋은지 짧고 실용적인 순서로 정리했습니다.',
+      '처음 설정부터 시작까지, 가장 헷갈리지 않는 순서로 정리했습니다.',
     docs_step_1_title: '1. OpenAI API 키를 입력합니다',
     docs_step_1_body:
       '먼저 OpenAI Billing에서 결제 설정이나 크레딧을 준비한 뒤 API 키를 만들어 설정 화면에 입력합니다. 이 키가 없으면 전사를 시작할 수 없습니다.',
@@ -693,7 +693,7 @@ const messages = {
       'TLS 는 네트워크 전송 구간을 보호하지만, 사용자의 Mac 이 악성코드에 감염되었거나 OS 계정이 침해된 상황까지 막아주지는 않습니다. OpenAI 는 business data 페이지에서 고객 business data 를 기본적으로 학습에 사용하지 않는다고 설명하지만, 클라우드 처리 자체는 이루어집니다. 민감한 정보를 보낼지는 사용자가 판단해야 합니다.',
     privacy_analytics_title: 'Aptabase 익명 분석',
     privacy_analytics_body:
-      '앱은 선택적으로 Aptabase 익명 분석을 보낼 수 있습니다. 어떤 기능이 쓰이는지, 어디서 오류가 나는지 파악해 제품 개선에 쓰기 위한 것이며 설정에서 끌 수 있습니다.',
+      '앱은 Aptabase 익명 분석을 사용해 어떤 기능이 쓰이는지, 어디서 오류가 나는지 파악합니다. 설정에서 끌 수 있으며 목적은 제품 개선에 한정됩니다.',
     tokusho_title: '특정상거래법에 따른 표기',
     tokusho_desc: '현재는 GitHub Releases를 통한 배포가 중심이며, 이 페이지에서는 운영 정보와 문의처를 공개합니다.',
     tokusho_seller: '운영자',
@@ -797,7 +797,7 @@ const messages = {
     features_eyebrow: '功能',
     features_title: '它能做什么',
     features_intro:
-      'TraLingo 不只是显示翻译结果，还把听懂现场内容、确认音频状态、以及留下可用记录这几件事连在一起。',
+      'TraLingo 把听懂、翻译、整理这几件事放在同一条工作流里。',
     features_card_1_title: '原文和翻译同时显示',
     features_card_1_body:
       '读翻译时也能看到原文，更容易确认措辞、专有名词和语气差异。',
@@ -838,7 +838,7 @@ const messages = {
     docs_eyebrow: '使用说明',
     docs_title: '给第一次使用的人看的指南',
     docs_intro:
-      '这里按最不容易踩坑的顺序说明首次启动后的设置方式。建议先从稳定路径开始，再逐步尝试更高级的模式。',
+      '这里按最不容易出错的顺序，说明第一次设置到开始使用的流程。',
     docs_step_1_title: '1. 输入 OpenAI API 密钥',
     docs_step_1_body:
       '先在 OpenAI Billing 页面准备好计费或额度，再创建 API 密钥并填入设置页面。没有这个密钥，就无法开始转录。',
@@ -931,7 +931,7 @@ const messages = {
       'TLS 保护的是网络传输过程，不代表你的 Mac 本地一定安全。如果设备存在恶意软件、系统账号被入侵、或者你本身就开启了云端 provider，这些风险不在 TLS 能解决的范围内。OpenAI 在 business data 页面说明客户 business data 默认不会用于训练模型，但云端处理本身依然会发生。',
     privacy_analytics_title: '关于 Aptabase 匿名分析',
     privacy_analytics_body:
-      '应用可以选择性地向 Aptabase 发送匿名分析，用于了解哪些功能被使用、哪里容易出错。这一项可以在设置中关闭，目的仅限于改进产品。',
+      '应用使用 Aptabase 匿名分析来了解哪些功能被使用、哪里容易出错。你可以在设置中关闭这一项，目的仅限于改进产品。',
     tokusho_title: '特定商取引法相关信息',
     tokusho_desc: '当前主要通过 GitHub Releases 发布应用。这里公开运营信息和联系渠道。',
     tokusho_seller: '运营方',
